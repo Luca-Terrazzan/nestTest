@@ -1,8 +1,15 @@
 import { Injectable } from '@nestjs/common';
 
+/**
+ * wip
+ */
 @Injectable()
 export class AppService {
-  getHello(): string {
+
+  /**
+   * wip
+   */
+  public getHello(): string {
     return 'Hello World!';
   }
 }
