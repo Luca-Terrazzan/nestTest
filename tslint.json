@@ -23,13 +23,14 @@
     "await-promise": true,
     "curly": true,
     "prefer-readonly": true,
-    "completed-docs": true,
     "jsdoc-format": true,
     "no-duplicate-imports": true,
     "import-spacing": true,
     "no-require-imports": true,
     "cyclomatic-complexity": [true, 4],
-    "no-console": false
+    "no-console": false,
+    "trailing-comma": false,
+    "interface-over-type-literal": false
   },
   "rulesDirectory": []
 }
