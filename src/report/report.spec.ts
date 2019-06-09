@@ -1,12 +1,11 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { Report } from './report';
-import { User } from './types/users';
+import { Users } from './reportTypes/users';
 
 describe('Report', () => {
-  const report = new Report<User>(new User());
+  const report = new Report<Users>(new Users());
 
   it('Should have a report type name', () => {
-    expect(report.getReportTypeName()).toEqual('Users');
+    expect(report.getReportTypeName()).toBeDefined();
   });
 
 });

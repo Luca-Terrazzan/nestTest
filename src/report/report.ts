@@ -2,12 +2,10 @@ import { IReportType } from './ireporttype';
 
 export class Report<T extends IReportType> {
 
-  private readonly reportType: T;
-  constructor(reportType: T) {
-    this.reportType = reportType;
-  }
+  constructor(private readonly reportMetadata: T) { }
 
   public getReportTypeName(): string {
-    return this.reportType.getTypeName();
+    return this.reportMetadata.getTypeName();
   }
+
 }
