@@ -1,20 +1,7 @@
-/**
- * User dto
- *
- * @export
- * @class User
- */
-export class User {
-  /**
-   * User name
-   *
-   * @private
-   * @type {string}
-   * @memberof User
-   */
-  private readonly name: string;
+import { IReportType } from '../ireporttype';
 
-  constructor(name: string) {
-    this.name = name;
+export class User implements IReportType {
+  public getTypeName(): string {
+    return 'Users';
   }
 }
