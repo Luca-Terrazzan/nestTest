@@ -2,9 +2,11 @@ import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 
 /**
- * wip
+ * Main app controller
+ *
+ * @class AppController
  */
-@Controller('aamon')
+@Controller()
 export class AppController {
   constructor(private readonly appService: AppService) { }
 
