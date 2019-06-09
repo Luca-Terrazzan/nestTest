@@ -1,4 +1,5 @@
 import { IReportType } from './ireporttype';
+import { ReportMetadata } from './types/reportMetadata';
 
 export class Report<T extends IReportType> {
 
@@ -6,6 +7,10 @@ export class Report<T extends IReportType> {
 
   public getReportTypeName(): string {
     return this.reportMetadata.getTypeName();
+  }
+
+  public getReportMetadata(): ReportMetadata {
+    return this.reportMetadata.getReportTypeMetadata();
   }
 
 }
