@@ -1,23 +1,13 @@
-import { hashBlock } from './utils';
-import { HttpAdapterHost } from '@nestjs/core';
 import { Transaction } from './transaction';
+import { ChainAncestorBlock } from './chain-ancestor-block';
 
-export class Block {
-
-  private readonly hash: string;
+export class Block extends ChainAncestorBlock {
 
   constructor(
-    private readonly previousBlockHash: string,
-    private readonly transaction: Transaction
+    protected readonly previousBlockHash: string,
+    protected readonly transaction: Transaction
   ) {
-    this.hash = hashBlock(this);
-  }
-
-  /**
-   * getHash
-   */
-  public getHash(): string {
-    return this.hash;
+    super(transaction);
   }
 
 }
