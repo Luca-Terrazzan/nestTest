@@ -1,19 +1,14 @@
-import { hashBlock } from './utils';
 import { Transaction } from './transaction';
-import { IBlock } from './block-interface';
+import { Block } from './block';
 
-export class ChainAncestorBlock implements IBlock {
+export class ChainAncestorBlock extends Block {
 
   protected readonly hash: string;
 
   constructor(
     protected readonly transaction: Transaction
   ) {
-    this.hash = hashBlock(this);
-  }
-
-  public getHash(): string {
-    return this.hash;
+    super(undefined, transaction);
   }
 
 }

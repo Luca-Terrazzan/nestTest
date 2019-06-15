@@ -1,13 +1,20 @@
 import { Transaction } from './transaction';
-import { ChainAncestorBlock } from './chain-ancestor-block';
+import { hashBlock } from './utils';
 
-export class Block extends ChainAncestorBlock {
+export class Block {
+
+  protected readonly hash: string;
 
   constructor(
-    protected readonly previousBlockHash: string,
+    private readonly previousBlockHash: string,
     protected readonly transaction: Transaction
   ) {
-    super(transaction);
+    this.previousBlockHash = previousBlockHash;
+    this.hash = hashBlock(this);
+  }
+
+  public getHash(): string {
+    return this.hash;
   }
 
 }

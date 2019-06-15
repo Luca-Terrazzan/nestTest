@@ -1,8 +1,8 @@
-import { IBlock } from './block-interface';
+import { Block } from './block';
 
 /**
  * TODO
  */
-export function hashBlock(block: IBlock): string {
+export function hashBlock(block: Block): string {
   return JSON.stringify(block);
 }
