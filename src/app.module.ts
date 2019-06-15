@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { NewspaperModule } from './newspaper/newspaper.module';
 import { AamonModule } from './aamon/aamon.module';
 import { ReportService } from './report/report.service';
+import { AamonController } from './aamon/aamon.controller';
 
 /**
  * Main app module
@@ -11,8 +11,8 @@ import { ReportService } from './report/report.service';
  * @class AppModule
  */
 @Module({
-  imports: [NewspaperModule, AamonModule],
+  imports: [AamonModule],
   controllers: [AppController],
-  providers: [AppService, ReportService],
+  providers: [AppService],
 })
 export class AppModule { }
