@@ -1,6 +1,8 @@
+import { Block } from './block';
+
 /**
  * TODO
  */
-export function hashFunction(text: string) {
-  return text;
+export function hashBlock(block: Block): string {
+  return JSON.stringify(block);
 }
